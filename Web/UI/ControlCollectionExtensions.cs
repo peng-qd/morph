@@ -20,7 +20,7 @@
     /// <returns>
     /// The IEnumerable.
     /// </returns>
-    public static IEnumerable<Control> Flatten([NotNull] this ControlCollection controls)
+    public static IEnumerable<Control> Flatten(this ControlCollection controls)
     {
       Assert.ArgumentNotNull(controls, "controls");
 

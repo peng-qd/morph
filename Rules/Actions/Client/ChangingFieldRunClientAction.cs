@@ -32,7 +32,6 @@ namespace Morph.Forms.Rules.Actions.Client
     /// <value>
     /// The field trigger.
     /// </value>
-    [CanBeNull]
     public string Trigger { get; set; }
 
     /// <summary>
@@ -41,7 +40,6 @@ namespace Morph.Forms.Rules.Actions.Client
     /// <value>
     /// The trigger value.
     /// </value>
-    [CanBeNull]
     public string TriggerValue { get; set; }
 
     #endregion
@@ -52,7 +50,7 @@ namespace Morph.Forms.Rules.Actions.Client
     /// Applies the specified rule context.
     /// </summary>
     /// <param name="ruleContext">The rule context.</param>
-    public override void Apply([NotNull]T ruleContext)
+    public override void Apply(T ruleContext)
     {
       Assert.ArgumentNotNull(ruleContext, "ruleContext");
 
@@ -69,8 +67,7 @@ namespace Morph.Forms.Rules.Actions.Client
     /// Registers the script.
     /// </summary>
     /// <param name="control">The control.</param>
-    [CanBeNull]
-    protected override string PrepareScript([NotNull] Control control)
+    protected override string PrepareScript(Control control)
     {
       Control trigger = this.GetField(control, this.Trigger);
       if (trigger == null || control.Page == null)
@@ -100,7 +97,6 @@ namespace Morph.Forms.Rules.Actions.Client
     /// <returns>
     /// The client script.
     /// </returns>
-    [CanBeNull]
     protected abstract string BuildClientScript();
 
     #endregion

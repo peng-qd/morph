@@ -27,8 +27,7 @@ namespace Morph.Forms.Rules.Actions
     /// <returns>
     /// The trigger field.
     /// </returns>
-    [CanBeNull]
-    protected Control GetField([NotNull] Control context, [CanBeNull] string id)
+    protected Control GetField(Control context, string id)
     {
       Assert.ArgumentNotNull(context, "context");
 
@@ -55,8 +54,7 @@ namespace Morph.Forms.Rules.Actions
     /// <returns>
     /// The control matching any id.
     /// </returns>
-    [CanBeNull]
-    protected Control GetChildMatchingAnyId([NotNull] IEnumerable<Control> controls, [NotNull] params string[] ids)
+    protected Control GetChildMatchingAnyId(IEnumerable<Control> controls, params string[] ids)
     {
       Assert.ArgumentNotNull(controls, "controls");
       Assert.ArgumentNotNull(ids, "ids");

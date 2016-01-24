@@ -19,7 +19,6 @@
     /// <value>
     /// The name of the query string.
     /// </value>
-    [CanBeNull]
     public string QueryStringName { get; set; }
 
     #endregion
@@ -35,7 +34,7 @@
     /// <returns>
     /// The boolean.
     /// </returns>
-    protected override bool Execute([CanBeNull]T ruleContext)
+    protected override bool Execute(T ruleContext)
     {
       return !string.IsNullOrEmpty(this.QueryStringName) && 
              !string.IsNullOrEmpty(WebUtil.GetQueryString(this.QueryStringName, null));

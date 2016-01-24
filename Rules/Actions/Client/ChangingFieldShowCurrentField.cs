@@ -17,7 +17,6 @@
     /// <returns>
     /// The client script.
     /// </returns>
-    [NotNull]
     protected override string BuildClientScript()
     {
       return "$(this).parent().parent().show();";
