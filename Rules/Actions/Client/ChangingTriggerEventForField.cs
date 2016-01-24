@@ -23,7 +23,6 @@
     /// <value>
     /// The event.
     /// </value>
-    [CanBeNull]
     public string Event { get; set; }
 
     /// <summary>
@@ -32,7 +31,6 @@
     /// <value>
     /// The trigger.
     /// </value>
-    [CanBeNull]
     public string Trigger { get; set; }
 
     #endregion
@@ -43,7 +41,7 @@
     /// Applies the specified rule context.
     /// </summary>
     /// <param name="ruleContext">The rule context.</param>
-    public override void Apply([NotNull] T ruleContext)
+    public override void Apply(T ruleContext)
     {
       Assert.ArgumentNotNull(ruleContext, "ruleContext");
 
@@ -62,8 +60,7 @@
     /// <returns>
     /// The script.
     /// </returns>
-    [NotNull]
-    protected override string PrepareScript([NotNull] Control control)
+    protected override string PrepareScript(Control control)
     {
       Control trigger = this.GetField(control, this.Trigger);
       if (trigger == null || control.Page == null)

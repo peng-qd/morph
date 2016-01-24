@@ -26,7 +26,6 @@
     /// <value>
     /// The field2.
     /// </value>
-    [CanBeNull]
     public string Trigger2 { get; set; }
 
     /// <summary>
@@ -35,7 +34,6 @@
     /// <value>
     /// The value2.
     /// </value>
-    [CanBeNull]
     public string TriggerValue2 { get; set; }
 
     /// <summary>
@@ -44,7 +42,6 @@
     /// <value>
     /// The operator.
     /// </value>
-    [CanBeNull]
     public string Operator { get; set; }
 
     #endregion
@@ -55,7 +52,7 @@
     /// Applies the specified rule context.
     /// </summary>
     /// <param name="ruleContext">The rule context.</param>
-    public override void Apply([NotNull] T ruleContext)
+    public override void Apply(T ruleContext)
     {
       Assert.ArgumentNotNull(ruleContext, "ruleContext");
 
@@ -71,7 +68,7 @@
     /// Called when the fields has loaded.
     /// </summary>
     /// <param name="context">The context.</param>
-    protected override void OnFieldsLoaded([NotNull] Control context)
+    protected override void OnFieldsLoaded(Control context)
     {
       Assert.ArgumentNotNull(context, "context");
 

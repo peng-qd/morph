@@ -28,7 +28,7 @@
     /// <param name="ruleContext">
     /// The rule context.
     /// </param>
-    public override void Apply([NotNull]T ruleContext)
+    public override void Apply(T ruleContext)
     {
       Assert.ArgumentNotNull(ruleContext, "ruleContext");
 
@@ -43,7 +43,7 @@
     /// </summary>
     /// <param name="sender">The sender control.</param>
     /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-    protected virtual void OnControlLoaded([NotNull]object sender, [CanBeNull]EventArgs e)
+    protected virtual void OnControlLoaded(object sender, EventArgs e)
     {
       Assert.ArgumentNotNull(sender, "sender");
 

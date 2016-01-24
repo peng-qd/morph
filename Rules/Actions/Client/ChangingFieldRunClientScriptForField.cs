@@ -17,7 +17,6 @@
     /// <value>
     /// The script.
     /// </value>
-    [CanBeNull]
     public string Script { get; set; }
 
     #endregion
@@ -30,7 +29,6 @@
     /// <returns>
     /// The script.
     /// </returns>
-    [NotNull]
     protected override string BuildClientScript()
     {
       return this.Script ?? string.Empty;

@@ -46,25 +46,28 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Sitecore.Analytics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Sitecore.Analytics.dll</HintPath>
+    <Reference Include="Sitecore.Analytics">
+      <HintPath>lib\Sitecore.Analytics.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Analytics.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Sitecore.Analytics.DataAccess.dll</HintPath>
+    <Reference Include="Sitecore.Analytics.DataAccess">
+      <HintPath>lib\Sitecore.Analytics.DataAccess.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Analytics.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Sitecore.Analytics.Model.dll</HintPath>
+    <Reference Include="Sitecore.Analytics.Model">
+      <HintPath>lib\Sitecore.Analytics.Model.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Forms.Core, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Sitecore.Forms.Core.dll</HintPath>
+    <Reference Include="Sitecore.Forms.Core">
+      <HintPath>lib\Sitecore.Forms.Core.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Kernel, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Sitecore.Kernel.dll</HintPath>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>lib\Sitecore.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.WFFM.Abstractions">
+      <HintPath>lib\Sitecore.WFFM.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -134,13 +137,6 @@
     <None Include="Data\serialization\master\sitecore\system\Settings\Rules\Web Forms for Marketers Conditions\Actions\Set Read Only.item" />
     <None Include="Data\serialization\master\sitecore\system\Settings\Rules\Web Forms for Marketers Conditions\Conditions\Query String Condition.item" />
     <None Include="doc\Selection-dependent inputs.docx" />
-    <Content Include="Web.config" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

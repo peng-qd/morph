@@ -20,7 +20,6 @@
     /// <value>
     /// The item id.
     /// </value>
-    [CanBeNull]
     public string ItemId { get; set; }
 
     #endregion
@@ -33,7 +32,6 @@
     /// <returns>
     /// The client script.
     /// </returns>
-    [NotNull]
     protected override string BuildClientScript()
     {
       if (string.IsNullOrEmpty(this.ItemId) || Context.Database == null)

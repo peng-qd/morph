@@ -15,7 +15,7 @@
     /// Applies the specified rule context.
     /// </summary>
     /// <param name="ruleContext">The rule context.</param>
-    public override void Apply([NotNull]T ruleContext)
+    public override void Apply(T ruleContext)
     {
       var disableValidation = new ChangingFieldsToValuesDisableValidation<ConditionalRuleContext>();
       disableValidation.Trigger = this.Trigger;
@@ -34,7 +34,6 @@
     /// <returns>
     /// The client script.
     /// </returns>
-    [NotNull]
     protected override string BuildClientScript()
     {
       return "$(this).parent().parent().hide();";

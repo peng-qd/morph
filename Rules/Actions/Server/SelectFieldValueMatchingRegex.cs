@@ -26,7 +26,6 @@
     /// <value>
     /// The field.
     /// </value>
-    [CanBeNull]
     public string FieldId { get; set; }
 
     /// <summary>
@@ -35,7 +34,6 @@
     /// <value>
     /// The regex.
     /// </value>
-    [CanBeNull]
     public string Pattern { get; set; }
 
     #endregion
@@ -46,7 +44,7 @@
     /// Applies the specified rule context.
     /// </summary>
     /// <param name="ruleContext">The rule context.</param>
-    public override void Apply([NotNull]T ruleContext)
+    public override void Apply(T ruleContext)
     {
       Assert.ArgumentNotNull(ruleContext, "ruleContext");
 
@@ -64,7 +62,7 @@
     /// Copies the matching value.
     /// </summary>
     /// <param name="control">The control.</param>
-    protected virtual void CopyMatchingValue([NotNull]Control control)
+    protected virtual void CopyMatchingValue(Control control)
     {
       Assert.ArgumentNotNull(control, "control");
 

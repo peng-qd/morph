@@ -17,7 +17,7 @@
     /// Applies the specified rule context.
     /// </summary>
     /// <param name="ruleContext">The rule context.</param>
-    public override void Apply([NotNull]T ruleContext)
+    public override void Apply(T ruleContext)
     {
       Assert.ArgumentNotNull(ruleContext, "ruleContext");
 
@@ -35,7 +35,6 @@
     /// <value>
     /// The holder.
     /// </value>
-    [CanBeNull]
     public string Holder { get; set; }
 
     /// <summary>
@@ -45,8 +44,7 @@
     /// <returns>
     /// The script.
     /// </returns>
-    [NotNull]
-    protected override string PrepareScript([NotNull]Control control)
+    protected override string PrepareScript(Control control)
     {
       var holder = this.GetField(control, this.Holder);
       if (holder == null)
@@ -69,7 +67,6 @@
     /// <returns>
     /// The client script.
     /// </returns>
-    [NotNull]
     protected override string BuildClientScript()
     {
       return "$(this).val($($('[name=\"{{0}}\"]:checked')[0] || $('[name=\"{{0}}\"]')[0]).val())";

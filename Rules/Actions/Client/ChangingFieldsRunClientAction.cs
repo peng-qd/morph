@@ -32,7 +32,6 @@
     /// <value>
     /// The trigger2.
     /// </value>
-    [CanBeNull]
     public string Trigger2 { get; set; }
 
     /// <summary>
@@ -41,7 +40,6 @@
     /// <value>
     /// The trigger value2.
     /// </value>
-    [CanBeNull]
     public string TriggerValue2 { get; set; }
 
     /// <summary>
@@ -50,7 +48,6 @@
     /// <value>
     /// The operator.
     /// </value>
-    [CanBeNull]
     public string Operator { get; set; }
 
     #endregion
@@ -61,7 +58,7 @@
     /// Applies the specified rule context.
     /// </summary>
     /// <param name="ruleContext">The rule context.</param>
-    public override void Apply([NotNull] T ruleContext)
+    public override void Apply(T ruleContext)
     {
       Assert.ArgumentNotNull(ruleContext, "ruleContext");
 
@@ -80,8 +77,7 @@
     /// <returns>
     /// The script.
     /// </returns>
-    [NotNull]
-    protected override string PrepareScript([NotNull] Control control)
+    protected override string PrepareScript(Control control)
     {
       Control trigger = this.GetField(control, this.Trigger);
       Control trigger2 = this.GetField(control, this.Trigger2);
